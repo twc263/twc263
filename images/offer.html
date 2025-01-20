@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="offer.css">
+
+</head>
+<body>
+    <div class="content">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="address">
+                    263 Hampshire Rd, <br>Sunshine VIC 3020
+                </div>
+                <div class="logo">
+                    <a href="https://www.instagram.com/thewesterncraftery/" target="_blank">
+                        <img src="./images/logo.svg" alt="The Western Craftery">
+                    </a>                
+                </div>
+                <div class="phone">
+                    (+61) 433 919 886 
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Stocks.html">Stocks</a></li>
+                <li><a href="drink-menu.html">Drinks</a></li>
+                <li><a href="offer.html" class="active">Offers</a></li>
+                <li><a href="event.html">Events</a></li>
+            </ul>
+        </div>
+    </nav>
+        <div class="offers-banner"><img src ="Tutorial/img/Limited Specials Dec.svg">
+            <div class="offers-countdown" id ="countdown1">00:00:00</div>
+        </div>
+        <div class="grid-responsive js-load-products">
+                                        <div class="product-container">
+                                            <div class="image-offer-wrapper">
+                                                <img loading="lazy" src="assets/images/Witching Hour.svg" class="product-image" alt="Hawkers Beer Witching Hour Imperial Porter" />
+                                                <div class="second-rotation"></div>
+                                            </div>
+                                            <div class="product-details">
+                                                <div class="product-info">
+                                                    <p class="producer-name">Hawkers Beer</p>
+                                                    <p class="product-name">Witching Hour</p>
+                                                    <p class="product-type">Imperial Porter</p>
+                                                    <p class="product-specs">9% <span class="small-bold-text">ABV</span>, 440 <span class="small-bold-text">ml</span></p>
+                                                </div>
+                                                <div class="product-pricing">
+                                                    <p class="producer-location">Reservoir, VIC</p>
+                                                    <p class="price-first">1<span class="small-text">x</span> | <span class="dollar-text">$ </span>12<span class="dollar-text">.99 </span> | -7%</p>
+                                                    <p class="price-second">2<span class="small-text">x</span> | <span class="dollar-text">$ </span>10<span class="dollar-text">.99 </span> | -21%</p>
+                                                    <p class="rrp">RRP: $13.99</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="quote-container">
+                                            <div class="quote-text">
+                                                "Don't fear the darkest hour of night, embrace it and pair it with a b
+                                                <a href="https://untappd.com/b/hawkers-beer-witching-hour/5874361" class="more-link" target="_blank">... Only 3 left </a><span>"</span>
+                                            </div>
+                                            <div class="order-button">
+                                                <a href="https://www.instagram.com/direct/t/17851876955786176" target="_blank">
+                                                    <button class="order-now">Claim Offer</button>
+                                                </a>
+                                            </div>
+                                        </div>
+            
+        </div>
+        </div>
+        <button id="scrollButton" class="scroll-button"></button>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Trading Hours:</h4>
+            <p>Mon - Sat: 9:00 - 23:00</p>
+            <p>Sun: 10:00 - 23:00</p>        
+        </div>
+        <div class="footer-section">
+            <h4>Quick links</h4>
+                <a href="https://www.instagram.com/thewesterncraftery/" target="_blank">Instagram</a> <br><br>
+                <a href="https://untappd.com/v/the-western-craftery/11717628" target="_blank">Untappd</a><br><br>
+                <a href="#">Refund Policy</a><br><br>
+                <a href="#">Membership</a><br><br>
+        </div>
+        <div class="footer-section">
+            <h4>Contact us</h4>
+            <p>Tel: (03) 9311 9988</p>
+            <p>Email: <a href="mailto4:craft_republic_liquor@yahoo.com">thewesterncraftery@gmail.com</a></p>
+            <p>Address: 263 Hamsphire Road,<br>Sunshine VIC 3020, Australia</p>
+        </div>
+        <div class="footer-section">
+            <p>&copy;2024 The Western Craftery</p>
+            <p>All rights reserved.</p>
+            <p>ABN: 22 602 467 345</p>
+            <p>Liquor No: 3124424</p>
+            <p>The Western Craftery upholds the Responsible Service of Alcohol. It is prohibited by the Liquor Control Reform Act 1998 to supply alcohol to individuals under 18 years (Penalty exceeds $6,000) and/or for those under 18 years to purchase or receive liquor (Penalty exceeds $500).</p>
+        </div>
+    </div>
+</footer>
+</div>
+<script src="offer-data.js"></script>  <!-- Product data -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+    
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            console.log(`scrollTop: ${scrollTop}, lastScrollTop: ${lastScrollTop}`);
+    
+            if (scrollTop > lastScrollTop) {
+                // User is scrolling down, hide the navbar
+                navbar.style.top = '-160px'; // Adjust -60px based on your navbar height
+            } else {
+                // User is scrolling up, show the navbar
+                navbar.style.top = '0';
+            }
+    
+            lastScrollTop = scrollTop;
+        });
+        // Get the button element
+const scrollButton = document.getElementById('scrollButton');
+
+// Add a scroll event listener to the window
+window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+
+    // Check if the user is in the first or second half of the page
+    if (scrolled > (documentHeight - windowHeight) / 2) {
+        // In the second half, set the button to scroll to top
+        scrollButton.classList.add('up');
+    } else {
+        // In the first half, set the button to scroll to bottom
+        scrollButton.classList.remove('up');
+    }
+});
+
+// Add click event listener to the button
+scrollButton.addEventListener('click', () => {
+    if (scrollButton.classList.contains('up')) {
+        // Scroll to the top
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        // Scroll to the bottom
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        });
+    }
+});
+
+let endDate1 = new Date("01/09/2025 00:00:00").getTime();/* month/date/year */
+    let check1 = setInterval(function () {
+        let now1 = new Date().getTime();
+        let distance1 = endDate1 - now1;
+        let hour1 = Math.floor(distance1 / (60 * 60 * 1000));
+        let minute1 = Math.floor((distance1 % (60 * 60 * 1000)) / (60 * 1000));
+        let second1 = Math.floor((distance1 % (60 * 1000)) / 1000);
+
+        document.getElementById('countdown1').innerText = `Ends in ${padZero(hour1)}:${padZero(minute1)}:${padZero(second1)}`;
+
+        if (distance1 <= 0) {
+            clearInterval(check1);
+            document.getElementById('countdown1').innerText = "Offers Ended";
+        }
+        }, 1000);
+        function padZero(num) {
+    return num < 10 ? `0${num}` : num;
+    }
+///load Products from offer data
+let offerProductHTML = '';
+
+products.forEach(product => {
+    offerProductHTML += `
+    <div class="product-offer-card">
+      <div class="product-container">
+        <div class="image-offer-wrapper">
+            <img loading="lazy" src="${product.imgSrc}"  alt="${product.name}" />
+            <div class="second-rotation"></div>
+        </div>
+        <div class="product-info">
+            <p class="producer-name">${product.producer}</p>
+            <p class="product-name">${product.name}</p>
+            <p class="product-type">${product.type}</p>
+            <p class="product-specs">${product.abv} <span class="small-bold-text">ABV</span>
+                , ${product.volume}<span class="small-bold-text"> ml</span></p>
+        </div>
+        <div class="product-pricing">
+            <p class="producer-location">${product.location}</p>
+            <p class="price-first"><span class="dollar-text">$ </span>${product.price1} <span class="quantity">EACH</span> </p>
+            <p class="price-second">${product.bundleQuantity}<span class="quantity"> FOR </span><span class="dollar-text">$ </span>${product.price2} </p>
+            <p class="rrp">RRP: ${product.rrp}</p>
+        </div>
+      </div>
+       <div class="quote-container">
+                <div class="quote-text">
+                    "${product.quote} <a href="${product.ratingLink}" class="more-link" target="_blank">... ${product.rating}</a><span>"</span>
+                </div>
+                <div class="order-button">
+                    <a href="${product.orderLink}" target="_blank">
+                        <button class="order-now">Claim Offer</button>
+                    </a>
+                </div>
+            </div>
+    </div>`;
+});
+
+  document.querySelector('.js-load-products').
+  innerHTML = offerProductHTML;
+    </script>
+</body>
+</html>
