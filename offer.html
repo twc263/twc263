@@ -33,44 +33,12 @@
             </ul>
         </div>
     </nav>
-        <div class="offers-banner"><img src ="Tutorial/img/Limited Specials Dec.svg">
-            <div class="offers-countdown" id ="countdown1">00:00:00</div>
-        </div>
+    <div class="offers-banner"><img src ="Tutorial/img/Limited Specials Dec.svg">
+        <div class="offers-countdown" id ="countdown1">00:00:00</div>
+    </div>
         <div class="grid-responsive js-load-products">
-                                        <div class="product-container">
-                                            <div class="image-offer-wrapper">
-                                                <img loading="lazy" src="assets/images/Witching Hour.svg" class="product-image" alt="Hawkers Beer Witching Hour Imperial Porter" />
-                                                <div class="second-rotation"></div>
-                                            </div>
-                                            <div class="product-details">
-                                                <div class="product-info">
-                                                    <p class="producer-name">Hawkers Beer</p>
-                                                    <p class="product-name">Witching Hour</p>
-                                                    <p class="product-type">Imperial Porter</p>
-                                                    <p class="product-specs">9% <span class="small-bold-text">ABV</span>, 440 <span class="small-bold-text">ml</span></p>
-                                                </div>
-                                                <div class="product-pricing">
-                                                    <p class="producer-location">Reservoir, VIC</p>
-                                                    <p class="price-first">1<span class="small-text">x</span> | <span class="dollar-text">$ </span>12<span class="dollar-text">.99 </span> | -7%</p>
-                                                    <p class="price-second">2<span class="small-text">x</span> | <span class="dollar-text">$ </span>10<span class="dollar-text">.99 </span> | -21%</p>
-                                                    <p class="rrp">RRP: $13.99</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="quote-container">
-                                            <div class="quote-text">
-                                                "Don't fear the darkest hour of night, embrace it and pair it with a b
-                                                <a href="https://untappd.com/b/hawkers-beer-witching-hour/5874361" class="more-link" target="_blank">... Only 3 left </a><span>"</span>
-                                            </div>
-                                            <div class="order-button">
-                                                <a href="https://www.instagram.com/direct/t/17851876955786176" target="_blank">
-                                                    <button class="order-now">Claim Offer</button>
-                                                </a>
-                                            </div>
-                                        </div>
-            
         </div>
-        </div>
+    </div>
         <button id="scrollButton" class="scroll-button"></button>
 <footer class="footer">
     <div class="footer-container">
@@ -176,46 +144,6 @@ let endDate1 = new Date("01/09/2025 00:00:00").getTime();/* month/date/year */
         function padZero(num) {
     return num < 10 ? `0${num}` : num;
     }
-///load Products from offer data
-let offerProductHTML = '';
-
-products.forEach(product => {
-    offerProductHTML += `
-    <div class="product-offer-card">
-      <div class="product-container">
-        <div class="image-offer-wrapper">
-            <img loading="lazy" src="${product.imgSrc}"  alt="${product.name}" />
-            <div class="second-rotation"></div>
-        </div>
-        <div class="product-info">
-            <p class="producer-name">${product.producer}</p>
-            <p class="product-name">${product.name}</p>
-            <p class="product-type">${product.type}</p>
-            <p class="product-specs">${product.abv} <span class="small-bold-text">ABV</span>
-                , ${product.volume}<span class="small-bold-text"> ml</span></p>
-        </div>
-        <div class="product-pricing">
-            <p class="producer-location">${product.location}</p>
-            <p class="price-first"><span class="dollar-text">$ </span>${product.price1} <span class="quantity">EACH</span> </p>
-            <p class="price-second">${product.bundleQuantity}<span class="quantity"> FOR </span><span class="dollar-text">$ </span>${product.price2} </p>
-            <p class="rrp">RRP: ${product.rrp}</p>
-        </div>
-      </div>
-       <div class="quote-container">
-                <div class="quote-text">
-                    "${product.quote} <a href="${product.ratingLink}" class="more-link" target="_blank">... ${product.rating}</a><span>"</span>
-                </div>
-                <div class="order-button">
-                    <a href="${product.orderLink}" target="_blank">
-                        <button class="order-now">Claim Offer</button>
-                    </a>
-                </div>
-            </div>
-    </div>`;
-});
-
-  document.querySelector('.js-load-products').
-  innerHTML = offerProductHTML;
     </script>
 </body>
 </html>
