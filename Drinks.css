@@ -1,0 +1,31 @@
+.drinks-section{
+  background-color:#1e1e1e;
+  padding: 0 1em;
+  color: #fefefe;
+}
+.drinks-section h3{
+  text-align: center;
+}
+.sizes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: end;
+}
+.size-name{
+  padding-left: 0.5em;
+}
+.beer-spec{
+  font-size: 0.8rem;
+}
+.tap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: end;
+}
+.beer-name, .beer-logo, .price{
+  margin-left: 0.8rem;
+}

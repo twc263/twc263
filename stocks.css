@@ -1,0 +1,209 @@
+.browse-page-nav-bar {
+  background-color: transparent;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px; /* Increased the max-width */
+  padding: 0px 1em; /* Added padding for spacing */
+  width: 100%; /* Set width to 100% */
+  margin: 0.5em auto 2.63em auto; /* Center the bar on the page */
+}
+
+.nav-button {
+  padding: 0.5em 1em;
+  background-color: #f3f3f3;
+  color: #0a0a0a;
+  border: 1px solid #0a0a0a;
+  text-decoration: none;
+  border-radius: 0.263em;
+  transition: background-color 0.3s ease;
+  font-family: 'Inria Serif', serif;
+  font-size: 1rem;
+}
+
+.nav-button:hover {
+  background-color: #cccccc;
+}
+.nav-button.active {
+  background-color: #1e1e1e;
+  color: #f3f3f3;
+  border-color: #0a0a0a;
+  font-weight: bold;
+}
+
+.section-shop-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  padding-bottom: 0.33em;
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: LEDbottom 40s linear infinite;
+}
+
+.section-description{
+  font: 700 italic 1rem 'Inria Serif', sans-serif;
+  background-color: #1e1e1e;
+  color: #f3f3f3;
+  padding: 0.7rem;
+  animation: LED 40s linear infinite;
+  width: 96.33%;
+  margin: 0.5rem;
+  border-radius: 0.15em;
+  height: 4rem;
+}
+.shop-shelf {
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  gap: 0.33rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  margin: 0.5rem;
+  padding: 0.8em 0;
+}
+
+@keyframes LEDbottom {
+  0%{border-bottom: 0.165em solid hwb(0 6% 0%);}
+  10%{border-bottom: 0.165em  solid hwb(33 6% 0%);}
+  20%{border-bottom: 0.165em  solid hwb(66 6% 0%);}
+  30%{border-bottom: 0.165em  solid hwb(99 6% 0%);}
+  40%{border-bottom: 0.165em  solid hwb(132 6% 0%);}
+  50%{border-bottom: 0.165em  solid hwb(165 6% 0%);}
+  60%{border-bottom: 0.165em  solid hwb(198 6% 0%);}
+  70%{border-bottom: 0.165em  solid hwb(231 6% 0%);}
+  80%{border-bottom: 0.165em  solid hwb(264 6% 0%);}
+  90%{border-bottom: 0.165em  solid hwb(297 6% 0%);}
+  100%{border-bottom: 0.165em  solid hwb(330 6% 0%);}
+}
+@keyframes LEDimage {
+  0%{border-top: 0.165em solid hwb(0 6% 0%);
+      border-bottom: 0.165em solid hwb(0 6% 0%);}
+  10%{border-top: 0.165em solid hwb(33 6% 0%);
+      border-bottom: 0.165em solid hwb(33 6% 0%);}
+  20%{border-top: 0.165em solid hwb(66 6% 0%);
+      border-bottom: 0.165em solid hwb(66 6% 0%);}
+  30%{border-top: 0.165em solid hwb(99 6% 0%);
+      border-bottom: 0.165em solid hwb(99 6% 0%);}
+  40%{border-top: 0.165em solid hwb(132 6% 0%);
+      border-bottom: 0.165em solid hwb(132 6% 0%);}
+  50%{border-top: 0.165em solid hwb(165 6% 0%);
+      border-bottom: 0.165em solid hwb(165 6% 0%);}
+  60%{border-top: 0.165em solid hwb(198 6% 0%);
+      border-bottom: 0.165em solid hwb(198 6% 0%);}
+  70%{border-top: 0.165em solid hwb(231 6% 0%);
+      border-bottom: 0.165em solid hwb(231 6% 0%);}
+  80%{border-top: 0.165em solid hwb(264 6% 0%);
+      border-bottom: 0.165em solid hwb(264 6% 0%);}
+  90%{border-top: 0.165em solid hwb(297 6% 0%);
+      border-bottom: 0.165em solid hwb(297 6% 0%);}
+  100%{border-top: 0.165em solid hwb(330 6% 0%);
+      border-bottom: 0.165em solid hwb(330 6% 0%);}
+}
+/* Hide scrollbar in Webkit-based browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar{
+  height: 12px;
+  width: 8px;
+  background: gray;
+  border-radius: 0.12rem;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: #f9f9f9; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #a0a0a0; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #1e1e1e; 
+}
+::-webkit-scrollbar-track:horizontal {
+  background: #1e1e1e; 
+}  
+::-webkit-scrollbar-thumb:horizontal{
+  background: #facc15;
+  border-radius: 0.12rem;
+  border: 2px solid #1e1e1e;
+}
+
+.shop-product-card {
+  display: inline-block;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  text-align: center;
+  COLOR: #fefefe;
+  background-color: #1e1e1e;
+  border-radius: 0.33em;
+  width: 30%;
+ border: 3px solid #1e1e1e;
+}
+
+.star {
+  color: #facc15;
+  font-size: 0.75rem;
+  vertical-align:20%; /* Change the color here */
+}
+.shop-rating {
+  font: 700 1.2rem 'Inria Serif', sans-serif;
+  color: #facc15;
+  text-decoration: none;
+  -webkit-text-stroke: 0.001em #1e1e1e; /* Stroke width and color */
+}
+.rating-bar {
+  width: 95%;
+  background-color: #cccccc;
+  border-radius: 0.1em;
+  overflow: hidden;
+  height: 0.33rem;
+  margin: auto;
+}
+.rating-fill {
+  height: 100%;
+  background-color: rgb(250, 204, 21); /* You can choose any color for the fill */
+  transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+.shop-product-image {
+  width: 100%;
+  height: auto;
+  animation: LEDimage 40s linear infinite;
+  border-radius: 0.5em;
+}
+
+.shop-price{
+  font: 700 1rem 'Inria Serif', sans-serif;
+  margin-bottom: 0.33rem;
+}
+.shop-bulkprice {
+  font: 700 1.2rem 'Inria Serif', sans-serif;
+  color: #1e1e1e;
+  background-color: #facc15;
+  border-bottom-right-radius: 0.1em;
+  border-bottom-left-radius: 0.1em;
+
+}
+.quantity{
+  font: 500 0.85em 'Inria Serif', sans-serif;
+}
+.saving-text{
+  color: green;
+  font-size: 0.95rem;
+
+}
+.shop-dollar{
+  font-size: 0.7em;
+  vertical-align: 20%;
+}
+.shop-name {
+  font: 700 1rem 'Inria Serif', sans-serif;
+  text-align: center;
+  overflow: hidden;
+  margin-top:0.33rem
+}
+.shop-spec{
+  font: 700 0.9rem 'Inria Serif', sans-serif;
+  text-align: center;
+  margin: 0.33rem 0;
+  color: #cccccc;
+
+}

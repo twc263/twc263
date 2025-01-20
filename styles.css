@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+/* Base font size for mobile */
+html {
+    font-size: 14px;  /* Small screens get slightly smaller base size */
+  }
+  
+  /* Tablets */
+  @media screen and (min-width: 768px) {
+    html {
+      font-size: 15px;
+    }
+  }
+  
+  /* Larger tablets/small laptops */
+  @media screen and (min-width: 1024px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    overflow-x:hidden ;
+}
+
+.navbar {
+    transition: top 0.4s;
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 0.8em 0;
+    position: fixed;
+    width: 100%;
+    top: 0; /* Sticks the navbar to the top of the page */
+    z-index: 1000; /* Ensures the navbar stays above other content */
+}
+.content {
+    padding-top: 10rem; /* Equal to or slightly more than the navbar height */
+    margin: 0 auto;
+}
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.logo-container, .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 0.33em;
+}
+.nav-links{
+    max-width: 800px;
+    justify-content: space-between;
+    width: 90%;
+    padding: 0 0.33em;
+
+}
+.logo-container {
+    border-bottom: 1px solid #A0A0A0;
+    width: 100%;
+}
+.address, .phone {
+    color: #f3f3f3;
+    font-size: min(1rem, 3.5vw);
+    text-align: center;
+    font-family: 'Inria Serif', sans-serif;
+    font-weight: bold;
+}
+.logo img {
+width:7rem;
+  }
+
+.nav-links li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-links a {
+    position: relative; /* Necessary for the absolute positioning of the underline */
+    color: #A0A0A0; /* Default link color */
+    text-decoration: none;
+    font-size: 1rem;
+    padding-bottom: 0.33rem;
+}
+/* Highlight the active link */
+.nav-links a.active {
+    color: #f3f3f3; /* Emphasis color for active link */
+}
+/* Underscore to show the current page */
+.nav-links a.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2.63px;
+    background-color: #f3f3f3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    bottom: -5px; /* Adjust this to control how far below the text the underline appears */}
+/*footer*/
+.footer {
+    background-color: #1e1e1e;
+    color: #A0A0A0; /* Updated color for text */
+    padding: 20px;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 2.63rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #A0A0A0;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    margin-bottom: 15x;
+
+}
+
+/* Headings for Quick Links and Contact Us */
+.footer-section:nth-child(1) h4,
+.footer-section:nth-child(2) h4,
+.footer-section:nth-child(3) h4 {
+    color: #f3f3f3;
+}
+
+.footer-section h4 {
+    font-weight: bold;
+}
+
+/* Default link color */
+.footer-section a {
+    color: #A0A0A0; /* Updated color for links */
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Specific color for email link */
+.footer-section:nth-child(3) a {
+    color: #A0A0A0; /* Set to match the rest of the text */
+    text-decoration: none;
+}
+
+.footer-section:nth-child(3) a:hover {
+    color: #f3f3f3; /* Optional: Change color on hover */
+    text-decoration: underline;
+}
+
+.footer-section p {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-section {
+        min-width: 100%;
+    }
+}
+                                                /* offers */
+
+
+.small-text {
+    font-weight: 400;
+    font-size: 0.7rem; /* Adjust the size as needed */
+}
+.small-bold-text {
+    font-weight: 700;
+    font-size: 0.7rem; /* Adjust the size as needed */
+}
+.small-bold-spec-text {
+    font-weight: 700;
+    font-size: 0.8rem; /* Adjust the size as needed */
+}
+.dollar-text {
+    vertical-align: 18%; /* Adjust the percentage as needed */   
+    font-size: 0.7rem; /* Adjust the size as needed */
+}
+.dollar-bold-text {
+    font-weight: 700;
+    vertical-align: 15%; /* Adjust the percentage as needed */   
+    font-size: 0.7rem; /* Adjust the size as needed */
+}
+
+.grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 420px)); /* Forces three equal columns */
+    gap: 2.33rem;
+    width: 100%;
+    justify-content: center;
+    margin: 0; /* Adds white space outside the container */
+  }
+/*shop*/
+
+-----------------------/* Drinks Menu */--------------------------
+
+.section {
+    border-bottom: 1px solid #1e1e1e;
+    padding: 0 2em;
+    margin-top: 10px;
+}
+.price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 10px; /* Add some padding to the content */
+}
+.drink-dollar{
+    vertical-align: 30%;
+    font-size: 0.7rem;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0.8em 0.8em ;
+}
+h3{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.tap-beer p, .taps .tap p, .wines .wine p, .wines .red-wine p, .special-drinks .drink p, .corkage p {
+    font-size: 14px;
+    text-align: center;
+}
+.corkage {
+    text-align: center;
+    margin-top: 10px;
+    color: #000000 ;
+}
+.bold {
+    font-weight: bold;
+}
+.price-bold {
+    font-weight: 700;
+    color: #facc15; 
+    -webkit-text-stroke: 0.001em #1e1e1e; /* Stroke width and color */
+
+}
+.happy-bold {
+    margin: 1rem auto;
+    padding: 0.5rem;
+    background-color: #1e1e1e;
+    border-radius: 0.233rem;
+    width: 63%;
+    border: 0.233rem solid #facc15;
+    font-weight: 700;
+    font-size:1.1rem ;
+    text-align: center;
+    color: #facc15; 
+    -webkit-text-stroke: 0.001em #1e1e1e; /* Stroke width and color */
+}
+.dollar-happy-text {
+    font-weight: 700;
+    vertical-align: 30%; /* Adjust the percentage as needed */   
+    font-size: 10px; /* Adjust the size as needed */
+    color: #facc15; 
+    -webkit-text-stroke: 0.001em #1e1e1e; /* Stroke width and color */
+
+}
+.dollar-normal-text { 
+    vertical-align: 30%; /* Adjust the percentage as needed */   
+    font-size: 0.8rem; /* Adjust the size as needed */
+}
+.beer-strength {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+.tap-beer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    background-color: #1e1e1e;
+    color: #fefefe;
+    border-radius: 0.233rem;
+}
+.tap-beer-table thead th{
+    height: 4rem;
+}
+.tap-beer-table thead th:first-child {
+    border-bottom: 0.233rem solid #facc15;
+    border-right: 0.233rem solid #facc15;
+
+}
+.tap-beer-table .sizes th {
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    padding: 0 0.33rem;
+}
+
+.tap-beer-table .tap td {
+    text-align: center;
+    padding: 5px 5px;
+}
+
+.tap-beer-table .tap .beer-name {
+    text-align: center;
+}
+
+.tap-beer-table .tap .beer-logo img {
+    width: 50px;
+    height: auto;
+}
+.drink-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wine-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7em 1.5em;
+}
+.wine-category{
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 70px;
+}
+.wine-name{
+    flex:0.65;
+}
+
+.special-drinks .special-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.special-drinks .special-header p {
+    font-size: 14px;
+}
+
+.special-drinks .drink-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Center the items */
+    align-items: center;
+}
+.drink-list {
+    margin-top: 5px;
+}
+.special-drinks .drink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 calc(50% - 30px); /* Adjust width and spacing */
+    max-width: 200px; /* Max width for each item */
+}
+
+.special-drinks .drink img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.special-drinks .drink p {
+    margin-bottom: 10px; /* Add space between name and image */
+}
+/* event */
+.offers-banner{
+    width:100vw;
+    max-width: 1315px;
+    aspect-ratio: 21/9;
+    margin:auto;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .offers-banner img{
+    height: 100%;
+    object-fit: cover;
+  }
+  .offers-countdown{
+    color: hwb(133 13% 0%);
+    font-size: 4vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    position: absolute;
+    bottom: 1.5px;
+    right: 13%
+  }
+/* Scroll Button styling */
+.scroll-button {
+    position: fixed;
+    bottom: 10%;
+    left: 0px;
+    width: 33px;
+    height: 33px;
+    background-color: rgba(54, 54, 54, 0.8); /* Semi-transparent background */
+    color: rgba(255, 255, 255, 0.8); /* Lighter text color */
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.3s;
+    transition: opacity 0.3s, background-color 0.3s;
+    opacity: 0.33; /* Lower opacity by default */
+    z-index: 10000000;
+}
+
+/* Change background and opacity on hover */
+.scroll-button:hover {
+    background-color: rgba(51, 51, 51, 0.8);
+    opacity: 1; /* Fully visible on hover */
+}
+
+.scroll-button::before {
+    content: '↓'; /* Default arrow down */
+}
+
+.scroll-button.up::before {
+    content: '↑'; /* Arrow up for scrolling to the top */
+}
