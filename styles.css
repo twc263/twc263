@@ -36,11 +36,13 @@ body {
     padding: 0.8em 0;
     position: fixed;
     width: 100%;
+    opacity: 1;
     top: 0; /* Sticks the navbar to the top of the page */
     z-index: 1000; /* Ensures the navbar stays above other content */
 }
 .navbar.hide {
     top: -160px; /* Hide the navbar by moving it up */
+    opacity: 0;
   }
 .content {
     padding-top: 10rem; /* Equal to or slightly more than the navbar height */
@@ -226,13 +228,12 @@ width:7rem;
     margin-top: 10px;
 }
 .price {
-    font-weight: 700;
-    font-size: 1.2rem;
+    font: 700 18px 'Inria Serif', sans-serif;
     padding: 10px; /* Add some padding to the content */
 }
 .drink-dollar{
-    vertical-align: 30%;
-    font-size: 0.7rem;
+    vertical-align: 28%;
+    font-size: 12px;
 }
 h2 {
     font-size: 1.5rem;
@@ -259,7 +260,7 @@ h3{
 }
 .price-bold {
     font-weight: 700;
-    color: #facc15; 
+    color: #ffe91f; 
     -webkit-text-stroke: 0.001em #1e1e1e; /* Stroke width and color */
 
 }
@@ -269,18 +270,18 @@ h3{
     background-color: #1e1e1e;
     border-radius: 0.233rem;
     width: 63%;
-    border: 0.233rem solid #facc15;
+    border: 0.233rem solid #ffe91f;
     font-weight: 700;
     font-size:1.1rem ;
     text-align: center;
-    color: #facc15; 
+    color: #ffe91f; 
     -webkit-text-stroke: 0.001em #1e1e1e; /* Stroke width and color */
 }
 .dollar-happy-text {
     font-weight: 700;
     vertical-align: 30%; /* Adjust the percentage as needed */   
     font-size: 10px; /* Adjust the size as needed */
-    color: #facc15; 
+    color: #ffe91f; 
     -webkit-text-stroke: 0.001em #1e1e1e; /* Stroke width and color */
 
 }
@@ -305,8 +306,8 @@ h3{
     height: 4rem;
 }
 .tap-beer-table thead th:first-child {
-    border-bottom: 0.233rem solid #facc15;
-    border-right: 0.233rem solid #facc15;
+    border-bottom: 0.233rem solid #ffe91f;
+    border-right: 0.233rem solid #ffe91f;
 
 }
 .tap-beer-table .sizes th {
@@ -323,10 +324,11 @@ h3{
 
 .tap-beer-table .tap .beer-name {
     text-align: center;
+    font: 700 14px 'Inria Serif', sans-serif;
 }
 
 .tap-beer-table .tap .beer-logo img {
-    width: 50px;
+    width: 72px;
     height: auto;
 }
 .drink-header{

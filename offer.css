@@ -28,7 +28,7 @@
   margin: 0 8px;
   border-radius: 0.33em;
   padding: 0.5em;
-}
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.5), 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3); /* Shadows */}
 .product-container {
   display: flex;
 }
@@ -48,9 +48,13 @@ aspect-ratio: 1;
 place-self: center;
 text-align: center;
 border-radius: 5px;
-box-shadow:  0 0 8px 1px #ffe91f;
+box-shadow:  0 0 0.4rem 0.1rem #ffe91f;
 }
-
+.image-offer-wrapper:hover,
+.product-offer-card:hover{
+  box-shadow:  0 0 0.8rem 0.2rem #ffe91f;
+  transition: all 0.33s ease;
+}
 .image-offer-wrapper::before,
 .image-offer-wrapper::after {
 position: absolute;
@@ -61,10 +65,10 @@ border-image:
   conic-gradient(
     from var(--angle),
     transparent 79%,
-    #ffe91f 86%, 
-    #FFE921 93%, 
-    #FFF7AB  100% 
-  ) 1;
+    hwb(54 36% 0%) 86%, 
+    hwb(54 24% 0%) 93%, 
+    hwb(54 12% 0%) 100%
+    ) 1;
   filter: blur(.233em);
 animation: spin .8s linear infinite;
 content: '';
@@ -73,10 +77,10 @@ content: '';
 border-image: 
   conic-gradient(from calc(var(--angle) + 180deg),
   transparent 79%,
-  #ffe91f 86%, 
-  #FFE921 93%, 
-  #FFF7AB  100% 
-  ) 1;
+  hwb(54 36% 0%) 86%, 
+  hwb(54 24% 0%) 93%, 
+  hwb(54 12% 0%) 100%
+) 1;
 }
 @keyframes spin {
   from {
@@ -96,23 +100,24 @@ border-image:
 .product-info p, .product-pricing p {
   font-family: 'Inria Serif', sans-serif;
   margin: 8px 0 10px 0 ;
+  font-weight: bold;
+
 }
 .producer-name, .producer-location {
-  font-weight: bold;
-  font-size: 15px;
+  font-size: 0.85rem;
   color: #f3f3f3;
+  text-transform: uppercase;
 }
 .product-name, .product-type, .price-first,.price-second {
-  font-weight: normal;
-  font-size: 14px;
+  font-size: 1.05rem;
 }
 .product-name, .product-type{
-  color: #f3f3f3;
+  color: #ffe91f;
+  text-shadow: 0 0 0.14rem #ffe91f;
 }
 .product-specs,.rrp {
-  font-weight: bold;
   color: #cccccc;
-  font-size: 13px;
+  font-size: 0.85rem;
 }
 .product-pricing {
   flex:0.64 ;
@@ -123,13 +128,10 @@ border-image:
 
 .price-first, .price-second {
   color: #ffe91f;
+  text-shadow: 0 0 0.14rem #ffe91f;
   font-weight: bold;
   border-radius: 0.1rem;
   -webkit-text-stroke: 0.001em #1e1e1e; /* Stroke width and color */
-}
-.price-second{
-  color:#1e1e1e;
-  background-color: #ffe91f;
 }
 
 .quote-container {
@@ -141,7 +143,7 @@ border-image:
   
 }
 .quote-text {
-  font: italic 500 14px 'Inria Serif', sans-serif;
+  font: italic 500 1rem 'Inria Serif', sans-serif;
   color: #fefefe;
   flex:2.5;
   padding-right: 1em;
@@ -149,8 +151,10 @@ border-image:
 .order-button {
   flex:1;
   text-align: center;
-  box-shadow: 0 0 8px 1px #ffe91f;
-  background-color:#ffe91f ;
+  box-shadow: 0 0 0.4rem 0.1rem #ffe91f;
+  background-color:#ffe91f;
+  transition: all 0.33s ease;
+  border-radius: 0.12em;
 }
 .order-now {
   padding: 0.65em; /* Smaller padding for a smaller button */
@@ -160,20 +164,17 @@ border-image:
   border-radius: 0.233rem;
   cursor: pointer;
   transition: background-color 0.3s;
-  font: 700 1rem 'Inria Serif', sans-serif;
+  font: 700 1.1rem 'Inria Serif', sans-serif;
+  text-transform: uppercase;
 }
-.order-button:hover {
-  box-shadow: 0 0 12px 4px #ffe91f;
-
+.order-button:hover{
+  box-shadow: 0 0 0.8rem 0.2rem #ffe91f;
 }
 
 .more-link {
+  text-shadow: 0 0 0.14rem #ffe91f;
   font-weight: bold;
-  color: #ffe91f;
   text-decoration: none;
+  color: #ffe91f;
   -webkit-text-stroke: 0.001em #1e1e1e; /* Stroke width and color */
-}
-
-.more-link:hover {
-  text-decoration: underline;
 }

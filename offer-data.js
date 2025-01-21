@@ -169,8 +169,8 @@ const products = [
               <p class="producer-name">${product.producer}</p>
               <p class="product-name">${product.name}</p>
               <p class="product-type">${product.type}</p>
-              <p class="product-specs">${product.abv} <span class="small-bold-text">ABV</span>
-                  , ${product.volume}<span class="small-bold-text"> ml</span></p>
+              <p class="product-specs">${product.abv} <span class="small-text">ABV</span>
+                  , ${product.volume}<span class="small-text"> ml</span></p>
           </div>
           <div class="product-pricing">
               <p class="producer-location">${product.location}</p>
