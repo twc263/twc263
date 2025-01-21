@@ -1,11 +1,11 @@
-<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="0.5" y="0.504395" width="99" height="99" rx="4.5" fill="url(#paint0_radial_51_68)" stroke="#0A0A0A"/>
-<rect x="26.8276" y="2.2019" width="46.1111" height="95" rx="5" transform="rotate(0.3 26.8276 2.2019)" fill="url(#pattern0_51_68)"/>
+<svg width="300" height="301" viewBox="0 0 300 301" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="1.5" y="1.5127" width="297" height="297" rx="13.5" fill="url(#paint0_radial_51_68)" stroke="#0A0A0A" stroke-width="3"/>
+<rect x="80.4829" y="6.60547" width="138.333" height="285" rx="15" transform="rotate(0.3 80.4829 6.60547)" fill="url(#pattern0_51_68)"/>
 <defs>
 <pattern id="pattern0_51_68" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_51_68" transform="matrix(0.00380532 0 0 0.00184703 -0.255846 -0.0464246)"/>
 </pattern>
-<radialGradient id="paint0_radial_51_68" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50 50.0044) rotate(180) scale(50)">
+<radialGradient id="paint0_radial_51_68" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(150 150.013) rotate(180) scale(150)">
 <stop stop-color="#CDCB67"/>
 <stop offset="1" stop-color="#010204"/>
 </radialGradient>
