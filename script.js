@@ -1,20 +1,24 @@
 let lastScrollTop = 0;
 const navbar = document.querySelector('.navbar');
+let ticking = false;
 
-window.addEventListener('scroll', function() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    console.log(`scrollTop: ${scrollTop}, lastScrollTop: ${lastScrollTop}`);
-
-    if (scrollTop > lastScrollTop) {
-        // User is scrolling down, hide the navbar
-        navbar.style.top = '-160px'; // Adjust -60px based on your navbar height
-    } else {
-        // User is scrolling up, show the navbar
-        navbar.style.top = '0';
-    }
-
-    lastScrollTop = scrollTop;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        navbar.classList.add('hide');  // Add class to hide the navbar
+      } else {
+        // Scrolling up
+        navbar.classList.remove('hide');  // Remove class to show the navbar
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll values
+      ticking = false;
+    });
+    ticking = true;
+  }
 });
 var swiper = new Swiper('.swiper-container', {
 slidesPerView: 3.3,

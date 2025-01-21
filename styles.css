@@ -30,7 +30,7 @@ body {
 }
 
 .navbar {
-    transition: top 0.4s;
+    transition: top 0.4s ease;
     background-color: #1e1e1e;
     text-align: center;
     padding: 0.8em 0;
@@ -39,6 +39,9 @@ body {
     top: 0; /* Sticks the navbar to the top of the page */
     z-index: 1000; /* Ensures the navbar stays above other content */
 }
+.navbar.hide {
+    top: -160px; /* Hide the navbar by moving it up */
+  }
 .content {
     padding-top: 10rem; /* Equal to or slightly more than the navbar height */
     margin: 0 auto;
