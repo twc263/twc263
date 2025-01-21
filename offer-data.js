@@ -1,6 +1,6 @@
 const products = [
     {
-        producer: "Slow Lane",
+        producer: "Slow Lane Brewing",
         name: "Classis Haze",
         type: "Hefeweizen",
         abv: "5.6%",
@@ -17,7 +17,7 @@ const products = [
         bundleQuantity: "4"
     },
     {
-        producer: "Slow Lane",
+        producer: "Slow Lane Brewing",
         name: "Conditioned",
         type: "Hazy Pale Ale",
         abv: "5.4%",
@@ -35,12 +35,12 @@ const products = [
   
     },
     {
-        producer: "Bacchus",
+        producer: "Bacchus Brewing",
         name: "Hyperspatial",
         type: "Coffee Stout",
         abv: "7.8%",
         volume: 375,
-        location: "Queensland",
+        location: "QLD",
         price1: "11.99",
         price2: "22.99",
         rrp: "$13",
@@ -52,12 +52,12 @@ const products = [
         bundleQuantity: "2"
     },
     {
-      producer: "Bacchus",
+      producer: "Bacchus Brewing",
       name: "Hyperdelic",
       type: "Hazy IPA",
       abv: "7.4%",
       volume: 375,
-      location: "Queensland",
+      location: "QLD",
       price1: "11.99",
       price2: "22.99",
       rrp: "$13",
@@ -69,12 +69,12 @@ const products = [
       bundleQuantity: "2"
   },
   {
-      producer: "Bojak",
+      producer: "Bojak Brewing",
       name: "A Complex Juggle",
       type: "Hazy IPA",
       abv: "7.0%",
       volume: 440,
-      location: "Dandenong",
+      location: "DANDENONG",
       price1: "10.99",
       price2: "20.99",
       rrp: "$12",
@@ -86,12 +86,12 @@ const products = [
       bundleQuantity: "2"
   },
   {
-      producer: "Bojak",
+      producer: "Bojak Brewing",
       name: "Fence Sitter",
       type: "Oatcream Pale Ale",
       abv: "5.7%",
       volume: 375,
-      location: "Dandenong",
+      location: "DANDENONG",
       price1: "6.49",
       price2: "23.99",
       rrp: "$7",
@@ -103,12 +103,12 @@ const products = [
       bundleQuantity: "4"
   },
   {
-      producer: "Bojak",
+      producer: "Bojak Brewing",
       name: "Velvet King",
       type: "Oatmeal Stout",
       abv: "5.2%",
       volume: 375,
-      location: "Dandenong",
+      location: "DANDENONG",
       price1: "5.49",
       price2: "19.99",
       rrp: "$6",
@@ -120,12 +120,12 @@ const products = [
       bundleQuantity: "4"
   },
   {
-      producer: "Bright",
+      producer: "Bright Brewery",
       name: "Staircase",
       type: "Porter",
       abv: "5.2%",
       volume: 375,
-      location: "Bright",
+      location: "BRIGHT",
       price1: "6.49",
       price2: "23.99",
       rrp: "$7",
@@ -137,12 +137,12 @@ const products = [
       bundleQuantity: "4"
   },
   {
-      producer: "Bright",
+      producer: "Bright Brewery",
       name: "Hellfire",
       type: "Amber Ale",
       abv: "5%",
       volume: 375,
-      location: "Bright",
+      location: "BRIGHT",
       price1: "5.99",
       price2: "21.99",
       rrp: "$6.49",
