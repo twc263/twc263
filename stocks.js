@@ -6,7 +6,7 @@ const beers = {
         rating: 3.55,
         ratingCount: "7k",
         untappdUrl: "https://untappd.com/b/hop-nation-brewing-co-karma/2640813",
-        imageUrl: "./dark beer/Karma.svg",
+        imageUrl: "./dark beer/Karma.jpg",
         price: 5.99,
         bulkPrice: 21.99,
         bundleQuantity: 4,
