@@ -154,6 +154,7 @@ border-image:
   border-radius: 0.233rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 1rem;
 }
 .order-now:hover {
   background-color: #c68f00;
