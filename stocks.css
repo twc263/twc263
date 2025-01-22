@@ -182,9 +182,7 @@ background: #1e1e1e;
   border-bottom-left-radius: 0.1em;
 
 }
-.quantity{
-  font: 500 0.85em 'Inria Serif', sans-serif;
-}
+
 .saving-text{
   color: green;
   font-size: 0.95rem;

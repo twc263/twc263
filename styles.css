@@ -209,7 +209,9 @@ width:7rem;
     vertical-align: 15%; /* Adjust the percentage as needed */   
     font-size: 0.7rem; /* Adjust the size as needed */
 }
-
+.quantity{
+    font: 500 0.85em 'Inria Serif', sans-serif;
+  }
 .grid-responsive {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(370px, 420px)); /* Forces three equal columns */
