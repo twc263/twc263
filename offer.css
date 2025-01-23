@@ -55,15 +55,16 @@ box-shadow:  0 0 0.4em 0.1em #ffe91f;
 .image-offer-wrapper::before,
 .image-offer-wrapper::after {
 position: absolute;
+border-radius: 5px;
 z-index: 1;
 inset: -1em;
 border: solid 1.2em;
 border-image: 
   conic-gradient(
     from var(--angle),
-    transparent 79%,
-    hwb(54 12% 0%) 100%
-    ) 1;
+    hwb(54 12% 0%)  1%,
+    transparent 100%  
+) 1;
   filter: blur(.233em);
 animation: spin .8s linear infinite;
 content: '';
@@ -71,8 +72,8 @@ content: '';
 .image-offer-wrapper::after{
 border-image: 
   conic-gradient(from calc(var(--angle) + 180deg),
-  transparent 79%,
-  hwb(54 12% 0%) 100%
+  hwb(54 12% 0%)  1%,
+  transparent 100%
 ) 1;
 }
 @keyframes spin {
@@ -144,7 +145,7 @@ border-image:
 .order-button {
   flex:1;
   text-align: center;
-  box-shadow: 0 0 0.6em 0.1em #ffe91f;
+  box-shadow: 0 0 0.4em 0.1em #ffe91f;
   background-color:#ffe91f;
   transition: all 0.33s ease;
   border-radius: 0.12em;
@@ -170,6 +171,5 @@ border-image:
 .image-offer-wrapper:hover,
 .product-offer-card:hover,
 .order-button:hover{
-  box-shadow:  0 0 0.8em 0.4em #ffe91f;
-  transition: all 0.33s ease;
+  box-shadow:  0 0 0.8em 0.2em #ffe91f;
 }
