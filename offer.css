@@ -107,11 +107,11 @@ border-image:
 }
 .product-name, .product-type{
   color: #ffe91f;
-  text-shadow: 0 0 0.1em #ffe91f;
+  text-shadow: 0 0 0.08em #ffe91f;
 }
 .product-specs,.rrp {
   color: #cccccc;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
 }
 .product-pricing {
   flex:0.64 ;
@@ -122,7 +122,7 @@ border-image:
 
 .price-first, .price-second {
   color: #ffe91f;
-  text-shadow: 0 0 0.1em #ffe91f;
+  text-shadow: 0 0 0.08em #ffe91f;
   font-weight: bold;
   border-radius: 0.1rem;
   -webkit-text-stroke: 0.001em #1e1e1e; /* Stroke width and color */
@@ -162,7 +162,7 @@ border-image:
   text-transform: uppercase;
 }
 .more-link {
-  text-shadow: 0 0 0.1em #ffe91f;
+  text-shadow: 0 0 0.08em #ffe91f;
   font-weight: bold;
   text-decoration: none;
   color: #ffe91f;
