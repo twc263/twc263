@@ -59,8 +59,6 @@ border-image:
   conic-gradient(
     from var(--angle),
     transparent 79%,
-    hwb(54 36% 0%) 86%, 
-    hwb(54 24% 0%) 93%, 
     hwb(54 12% 0%) 100%
     ) 1;
   filter: blur(.233em);
@@ -71,8 +69,6 @@ content: '';
 border-image: 
   conic-gradient(from calc(var(--angle) + 180deg),
   transparent 79%,
-  hwb(54 36% 0%) 86%, 
-  hwb(54 24% 0%) 93%, 
   hwb(54 12% 0%) 100%
 ) 1;
 }
