@@ -122,7 +122,7 @@ background: #1e1e1e;
   background: #1e1e1e; 
 }  
 ::-webkit-scrollbar-thumb:horizontal{
-  background: #facc15;
+  background: #ffe91f;
   border-radius: 0.12rem;
   border: 2px solid #1e1e1e;
 }
@@ -140,13 +140,13 @@ background: #1e1e1e;
 }
 
 .star {
-  color: #facc15;
+  color: #ffe91f;
   font-size: 0.75rem;
   vertical-align:20%; /* Change the color here */
 }
 .shop-rating {
   font: 700 1.2rem 'Inria Serif', sans-serif;
-  color: #facc15;
+  color: #ffe91f;
   text-decoration: none;
   -webkit-text-stroke: 0.001em #1e1e1e; /* Stroke width and color */
 }
@@ -160,7 +160,7 @@ background: #1e1e1e;
 }
 .rating-fill {
   height: 100%;
-  background-color: rgb(250, 204, 21); /* You can choose any color for the fill */
+  background-color: #ffe91f; /* You can choose any color for the fill */
   transition: width 0.3s ease-in-out; /* Smooth transition */
 }
 .shop-product-image {
@@ -177,21 +177,18 @@ background: #1e1e1e;
 .shop-bulkprice {
   font: 700 1.2rem 'Inria Serif', sans-serif;
   color: #1e1e1e;
-  background-color: #facc15;
+  background-color: #ffe91f;
   border-bottom-right-radius: 0.1em;
   border-bottom-left-radius: 0.1em;
 
 }
 
 .saving-text{
-  color: green;
+  color: hwb(133 0% 40%);
   font-size: 0.95rem;
 
 }
-.shop-dollar{
-  font-size: 0.7em;
-  vertical-align: 20%;
-}
+
 .shop-name {
   font: 700 1rem 'Inria Serif', sans-serif;
   text-align: center;

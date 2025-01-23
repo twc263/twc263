@@ -6,29 +6,25 @@
 /* Base font size for mobile */
 html {
     font-size: 14px;  /* Small screens get slightly smaller base size */
-  }
-  
+  } 
   /* Tablets */
   @media screen and (min-width: 768px) {
     html {
       font-size: 15px;
     }
   }
-  
   /* Larger tablets/small laptops */
   @media screen and (min-width: 1024px) {
     html {
       font-size: 16px;
     }
   }
-
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: #f9f9f9;
     overflow-x:hidden ;
 }
-
 .navbar {
     transition: top 0.4s ease;
     background-color: #1e1e1e;
@@ -97,6 +93,9 @@ width:7rem;
     text-decoration: none;
     font-size: 1rem;
     padding-bottom: 0.33rem;
+    text-transform: uppercase; 
+    font-family: 'Inria Serif', sans-serif;
+    font-weight: bold;
 }
 /* Highlight the active link */
 .nav-links a.active {
@@ -201,8 +200,8 @@ width:7rem;
     font-size: 0.8rem; /* Adjust the size as needed */
 }
 .dollar-text {
-    vertical-align: 18%; /* Adjust the percentage as needed */   
-    font-size: 0.7rem; /* Adjust the size as needed */
+    vertical-align: 20%; /* Adjust the percentage as needed */   
+    font-size: 0.8rem; /* Adjust the size as needed */
 }
 .dollar-bold-text {
     font-weight: 700;
@@ -219,6 +218,10 @@ width:7rem;
     width: 100%;
     justify-content: center;
     margin: 0; /* Adds white space outside the container */
+  }
+  .shop-dollar{
+    font-size: 0.8em;
+    vertical-align: 16.5%;
   }
 /*shop*/
 

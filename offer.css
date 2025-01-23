@@ -5,7 +5,7 @@
   margin:auto;
   position: relative;
   margin-bottom: 20px;
-}
+} 
 .offers-banner img{
   height: 100%;
   object-fit: cover;
@@ -58,12 +58,12 @@ position: absolute;
 border-radius: 5px;
 z-index: 1;
 inset: -1em;
-border: solid 1.2em;
+border: solid 1.263em;
 border-image: 
   conic-gradient(
     from var(--angle),
     hwb(54 12% 0%)  1%,
-    transparent 100%  
+    transparent 40%  
 ) 1;
   filter: blur(.233em);
 animation: spin .8s linear infinite;
@@ -73,7 +73,7 @@ content: '';
 border-image: 
   conic-gradient(from calc(var(--angle) + 180deg),
   hwb(54 12% 0%)  1%,
-  transparent 100%
+  transparent 40%
 ) 1;
 }
 @keyframes spin {
