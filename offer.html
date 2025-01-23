@@ -35,7 +35,7 @@
         </div>
     </nav>
     <div class="offers-banner">
-        <img src ="./images/Limited Specials.jpg" alt="Offer1">
+        <img src ="./images/Limited Specials.png" alt="Offer1">
         <div class="offers-countdown" id ="countdown1">00:00:00</div>
     </div>
         <div class="grid-responsive js-load-products">
@@ -47,7 +47,7 @@
         <div class="footer-section">
             <h4>Trading Hours</h4>
             <p>MON - SAT: 9:00 - 23:00</p>
-            <p>SUN: 10:00 - 23:00</p>
+            <p>SUN: 10:00 - 23:00</p>       
         </div>
         <div class="footer-section">
             <h4>Quick links</h4>
@@ -127,25 +127,41 @@ scrollButton.addEventListener('click', () => {
         });
     }
 });
+function startCountdown(endDate, elementId) {
+    let timer = setInterval(function () {
+        let now = new Date().getTime();
+        let distance = endDate - now;
 
-let endDate1 = new Date("02/09/2025 00:00:00").getTime();/* month/date/year */
-    let check1 = setInterval(function () {
-        let now1 = new Date().getTime();
-        let distance1 = endDate1 - now1;
-        let hour1 = Math.floor(distance1 / (60 * 60 * 1000));
-        let minute1 = Math.floor((distance1 % (60 * 60 * 1000)) / (60 * 1000));
-        let second1 = Math.floor((distance1 % (60 * 1000)) / 1000);
-
-        document.getElementById('countdown1').innerText = `Ends in ${padZero(hour1)}:${padZero(minute1)}:${padZero(second1)}`;
-
-        if (distance1 <= 0) {
-            clearInterval(check1);
-            document.getElementById('countdown1').innerText = "Offers Ended";
+        if (distance <= 0) {
+            clearInterval(timer);
+            document.getElementById(elementId).innerText = "Offers Ended";
+            return;
         }
-        }, 1000);
-        function padZero(num) {
+
+        let hour = Math.floor(distance / (60 * 60 * 1000));
+        let minute = Math.floor((distance % (60 * 60 * 1000)) / (60 * 1000));
+        let second = Math.floor((distance % (60 * 1000)) / 1000);
+
+        if (hour > 99) {
+            let days = Math.floor(hour / 24);
+            let hours = hour % 24;
+            document.getElementById(elementId).innerHTML = `<span class="white-text">Ends in:</span> ${days}d ${hours}h`;
+        } else {
+            document.getElementById(elementId).innerHTML = `<span class="white-text">Ends in:</span> ${padZero(hour)}:${padZero(minute)}:${padZero(second)}`;
+        }
+    }, 1000);
+}
+
+function padZero(num) {
     return num < 10 ? `0${num}` : num;
-    }
+}
+
+// Example usage:
+let endDate1 = new Date("01/27/2025 16:00:00").getTime(); /* month/date/year */
+let endDate2 = new Date("02/15/2025 00:00:00").getTime(); /* month/date/year */
+
+startCountdown(endDate1, "countdown1");
+startCountdown(endDate2, "countdown2");
     </script>
 </body>
 </html>
