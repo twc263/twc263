@@ -172,24 +172,29 @@ const products = [
               <p class="product-specs">${product.abv} <span class="small-text">ABV</span>
                   , ${product.volume}<span class="small-text"> ml</span></p>
           </div>
-          <div class="product-pricing">
-              <p class="producer-location">${product.location}</p>
-              <p class="price-first"><span class="dollar-text">$ </span>${product.price1} <span class="quantity">EACH</span> </p>
-              <p class="price-second">${product.bundleQuantity}<span class="quantity"> FOR </span><span class="dollar-text">$ </span>${product.price2} </p>
-              <p class="rrp">RRP: ${product.rrp}</p>
-          </div>
+        <div class="product-pricing">
+            <p class="producer-location">${product.location}</p>
+            <p class="price-first"><span class="dollar-text">$ </span>
+            ${Math.floor(product.price1)} <span class='shop-dollar'>${(product.price1 % 1).toFixed(2).slice(2)}</span>
+            <span class="quantity">EACH</span> </p>
+            <p class="price-second">${product.bundleQuantity}<span class="quantity"> FOR </span>
+            <span class="dollar-text">$ </span>
+            ${Math.floor(product.price2)} <span class='shop-dollar'>${(product.price2 % 1).toFixed(2).slice(2)}</span> </p>
+            <p class="rrp" >RRP: ${product.rrp}</p>
         </div>
-         <div class="quote-container">
-                  <div class="quote-text">
-                      "${product.quote} <a href="${product.ratingLink}" class="more-link" target="_blank">... ${product.rating}</a><span>"</span>
-                  </div>
-                  <div class="order-button">
-                      <a href="${product.orderLink}" target="_blank">
-                          <button class="order-now">GET NOW</button>
-                      </a>
-                  </div>
-              </div>
-      </div>`;
+      </div>
+       <div class="quote-container">
+                <div class="quote-text">
+                    "${product.quote} 
+                    <a href="${product.ratingLink}" class="more-link" target="_blank">... ${product.rating}</a><span>"</span>
+                </div>
+                <div class="order-button">
+                    <a href="${product.orderLink}" target="_blank">
+                        <button class="order-now">GET NOW</button>
+                    </a>
+                </div>
+            </div>
+    </div>`;
   });
   
     document.querySelector('.js-load-products').
