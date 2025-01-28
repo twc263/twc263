@@ -64,15 +64,15 @@
           <li></li>
           <li></li>
         </ul>
-      </div>
+    </div>
             <!--BRANDS-->
     <div class="scroll" style="
-  --width: 10rem;
-  --height: 10rem;
-  --quantity: 25;
-">
-  <div class="brands-list"></div>
-</div>
+        --width: 10rem;
+        --height: 10rem;
+        --quantity: 25;
+        ">
+        <div class="brands-list"></div>
+    </div>
     <button id="scrollButton" class="scroll-button"></button>
     <footer class="footer">
         <div class="footer-container">
@@ -105,6 +105,54 @@
     </footer>
 </div>
     <script>
+
+
+let list = document.querySelector('.slider .list');
+let items = document.querySelectorAll('.slider .list .item');
+let dots = document.querySelectorAll('.slider .dots li');
+let prev = document.getElementById('prev');
+let next = document.getElementById('next');
+
+let active = 0;
+let lengthItems = items.length -1;
+
+next.onclick = function(){
+    if(active + 1 > lengthItems){
+      active = 0;
+    }else{
+      active +=1;
+    }
+    reloadSlider();
+}
+prev.onclick = function(){
+  if(active -1 < 0 ){
+    active = lengthItems;
+  }else{
+    active -=1;
+  } 
+  reloadSlider()
+}
+
+let refreshSlider = setInterval(()=> {next.click()}, 8700);
+
+function reloadSlider(){
+  let checkLeft = items[active].offsetLeft;
+  list.style.left = -checkLeft + 'px';
+  let lastActiveDot = document.querySelector('.slider .dots li.active');
+  lastActiveDot.classList.remove('active');
+  dots[active].classList.add('active');
+  clearInterval(refreshSlider);
+  refreshSlider = setInterval(()=> {next.click()}, 8700);
+}
+
+dots.forEach((li, key) => {
+  li.addEventListener('click', function(){
+    active = key;
+    reloadSlider();
+  })
+})
+
+
         let lastScrollTop = 0;
         const navbar = document.querySelector('.navbar');
     
