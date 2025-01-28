@@ -29,8 +29,8 @@ position: absolute;
 left: 100%;
 margin: 0 20px;
 transition: 0.4s ;
-animation: autoRun 40s linear infinite;
-animation-delay: calc( (40s / var(--quantity))* (var(--position) - 1 ) ) !important;
+animation: autoRun 2020s linear infinite;
+animation-delay: calc( (2020s / var(--quantity))* (var(--position) - 1 ) ) !important;
 }
 .scroll:hover .item{
 animation-play-state: paused !important;
