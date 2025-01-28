@@ -856,7 +856,7 @@ const beers = {
       rating: 2.9,
       ratingCount: "32k",
       untappdUrl: "https://untappd.com/b/sabeco-saigon-special/17357",
-      imageUrl: "./Imported/Saigon bt.png",
+      imageUrl: "./Imported/Saigon.png",
       price: 3.99,
       bulkPrice: 20.99,
       bundleQuantity: 6,
