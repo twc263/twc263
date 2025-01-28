@@ -29,8 +29,8 @@ position: absolute;
 left: 100%;
 margin: 0 20px;
 transition: 0.4s ;
-animation: autoRun 8.7s linear infinite;
-animation-delay: calc( (8.7s / var(--quantity))* (var(--position) - 1 ) ) !important;
+animation: autoRun 40s linear infinite;
+animation-delay: calc( (40s / var(--quantity))* (var(--position) - 1 ) ) !important;
 }
 .scroll:hover .item{
 animation-play-state: paused !important;
@@ -55,7 +55,7 @@ from{
 }
 
 .scroll[reverse="true"] .item{
-animation: reversePlay 8.7s linear infinite;
+animation: reversePlay 40s linear infinite;
 }
 
 @keyframes reversePlay {
@@ -81,7 +81,7 @@ margin-bottom: 20px;
   height: 100%;
   display: flex;
   width: max-content;
-  transition: 0.87s;
+  transition: 0.33s;
 
 }
 .list img{
