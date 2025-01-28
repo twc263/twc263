@@ -30,7 +30,7 @@ left: 100%;
 margin: 0 20px;
 transition: 0.4s ;
 animation: autoRun 20s linear infinite;
-animation-delay: calc( (4s / var(--quantity))* (var(--position) - 1 ) ) !important;
+animation-delay: calc( (20s / var(--quantity))* (var(--position) - 1 ) ) !important;
 }
 .scroll:hover .item{
 animation-play-state: paused !important;
@@ -55,7 +55,7 @@ from{
 }
 
 .scroll[reverse="true"] .item{
-animation: reversePlay 220s linear infinite;
+animation: reversePlay 20s linear infinite;
 }
 
 @keyframes reversePlay {
