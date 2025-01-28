@@ -12,7 +12,7 @@
 }
 .offers-countdown{
   color: hwb(133 12% 0%);
-  font-size: max(17px,4vw);
+  font-size: clamp(17px, 4vw, 48px);
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   text-align: center;
