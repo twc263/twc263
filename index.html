@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="content">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="address">
+                    263 Hampshire Rd, <br>Sunshine VIC 3020
+                </div>
+                <div class="logo">
+                    <a href="https://www.instagram.com/thewesterncraftery/" target="_blank">
+                        <img src="./logo.jpg" alt="The Western Craftery">
+                    </a>                
+                </div>
+                <div class="phone">
+                    (+61) 433 919 886 
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Stocks.html">Stocks</a></li>
+                <li><a href="drink-menu.html">Drinks</a></li>
+                <li><a href="offer.html">specials</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="list">
+          <div class="item">
+            <img src="./First Purchase.png">
+          </div>
+          <div class="item">
+            <img src="./Limited Specials.png">
+          </div>      
+          <div class="item">
+            <img src="./Collaboration.png">
+          </div>     
+          <div class="item">
+            <img src="./Tasting.png">
+          </div>      
+          <div class="item">
+            <img src="./Rewards.png">
+          </div>
+        </div>
+        <!-- button prev and next-->
+        <div class="buttons">
+          <button id="prev"><</button>
+          <button id="next">></button>
+        </div>
+          <!-- dots (if 5 items => 5 dots)-->
+        <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+            <!--BRANDS-->
+    <div class="scroll" style="
+  --width: 10rem;
+  --height: 10rem;
+  --quantity: 25;
+">
+  <div class="list"></div>
+</div>
+    <button id="scrollButton" class="scroll-button"></button>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Trading Hours</h4>
+                <p>MON - SAT: 9:00 - 23:00</p>
+                <p>SUN: 10:00 - 23:00</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick links</h4>
+                    <a href="https://www.instagram.com/thewesterncraftery/" target="_blank">Instagram</a> <br><br>
+                    <a href="https://untappd.com/v/the-western-craftery/11717628" target="_blank">Untappd</a><br><br>
+                    <a href="#">Refund Policy</a><br><br>
+                    <a href="#">Membership</a><br><br>
+            </div>
+            <div class="footer-section">
+                <h4>Contact us</h4>
+                <p>Tel: (03) 9311 9988</p>
+                <p>Email: <a href="mailto4:craft_republic_liquor@yahoo.com">thewesterncraftery@gmail.com</a></p>
+                <p>Address: 263 Hamsphire Road,<br>Sunshine VIC 3020, Australia</p>
+            </div>
+            <div class="footer-section">
+                <p>&copy;2025 The Western Craftery</p>
+                <p>All rights reserved.</p>
+                <p>ABN: 22 602 467 345</p>
+                <p>Liquor No: 3124424</p>
+                <p>The Western Craftery upholds the Responsible Service of Alcohol. It is prohibited by the Liquor Control Reform Act 1998 to supply alcohol to individuals under 18 years (Penalty exceeds $6,000) and/or for those under 18 years to purchase or receive liquor (Penalty exceeds $500).</p>
+            </div>
+        </div>
+    </footer>
+</div>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+    
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            console.log(`scrollTop: ${scrollTop}, lastScrollTop: ${lastScrollTop}`);
+    
+            if (scrollTop > lastScrollTop) {
+                // User is scrolling down, hide the navbar
+                navbar.style.top = '-160px'; // Adjust -60px based on your navbar height
+            } else {
+                // User is scrolling up, show the navbar
+                navbar.style.top = '0';
+            }
+    
+            lastScrollTop = scrollTop;
+        });
+                // Get the button element
+const scrollButton = document.getElementById('scrollButton');
+
+// Add a scroll event listener to the window
+window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+
+    // Check if the user is in the first or second half of the page
+    if (scrolled > (documentHeight - windowHeight) / 2) {
+        // In the second half, set the button to scroll to top
+        scrollButton.classList.add('up');
+    } else {
+        // In the first half, set the button to scroll to bottom
+        scrollButton.classList.remove('up');
+    }
+});
+
+// Add click event listener to the button
+scrollButton.addEventListener('click', () => {
+    if (scrollButton.classList.contains('up')) {
+        // Scroll to the top
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        // Scroll to the bottom
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        });
+    }
+});
+
+const itemCount = 25; // Number of items
+const listContainer = document.querySelector('.list');
+const itemTemplate = (position) => `
+  <div class="item" style="--position: ${position}">
+    <img src="./Brands/Group ${position}.png" alt="Brand ${position}">
+  </div>
+`;
+
+// Accumulate HTML content
+let itemsHTML = '';
+for (let i = 1; i <= itemCount; i++) {
+  itemsHTML += itemTemplate(i);
+}
+
+// Inject accumulated HTML into the container
+listContainer.innerHTML = itemsHTML;
+
+    </script>   
+</body>
+</html>
