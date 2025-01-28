@@ -43,7 +43,7 @@ filter:grayscale(0);
 }
 .scroll .brands-list .item img{
 width: 100%;
-margin: 0;
+margin: 0 20px;
 }
 
 @keyframes autoRun {
