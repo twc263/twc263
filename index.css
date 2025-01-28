@@ -16,13 +16,13 @@ mask-image: linear-gradient(
   
 );
 }
-.scroll .list{
+.scroll .brands-list{
 display: flex;
 width: 100%;
 min-width: calc(var(--width) *var(--quantity));
 position: relative;
 }
-.scroll .list .item{
+.scroll .brands-list .item{
 width: var(--width);
 height: var(--height);
 position: absolute;
@@ -40,7 +40,7 @@ filter: grayscale(1);
 filter:grayscale(0);
 
 }
-.scroll .list .item img{
+.scroll .brands-list .item img{
 width: 100%;
 margin: 0;
 }

@@ -71,7 +71,7 @@
   --height: 10rem;
   --quantity: 25;
 ">
-  <div class="list"></div>
+  <div class="brands-list"></div>
 </div>
     <button id="scrollButton" class="scroll-button"></button>
     <footer class="footer">
@@ -160,7 +160,7 @@ scrollButton.addEventListener('click', () => {
 });
 
 const itemCount = 25; // Number of items
-const listContainer = document.querySelector('.list');
+const listContainer = document.querySelector('.brands-list');
 const itemTemplate = (position) => `
   <div class="item" style="--position: ${position}">
     <img src="./Brands/Group ${position}.png" alt="Brand ${position}">
