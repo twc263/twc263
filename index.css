@@ -91,7 +91,7 @@ padding-top: 8vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 3vw;
+  padding-inline: 1vw;
 }
 .buttons button{
   width: clamp(28px,4vw,48px);
@@ -102,7 +102,7 @@ padding-top: 8vh;
   border: none;
   font-family: monospace;
   font-weight: bold;
-  font-size: clamp(14px,2vw,24px);
+  font-size: clamp(20px,2vw,24px);
   text-align: center;
   justify-content: space-between;
   align-items: center;
