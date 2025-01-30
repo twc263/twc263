@@ -73,6 +73,7 @@ aspect-ratio: 21/9;
 margin:auto;
 position: relative;
 margin-bottom: 20px;
+padding-top: 5vh;
 }
 .list{
   position: absolute;
