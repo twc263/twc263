@@ -94,15 +94,15 @@ padding-top: 8vh;
   padding-inline: 1vw;
 }
 .buttons button{
-  width: clamp(28px,4vw,48px);
-  height: clamp(28px,4vw,48px);
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background-color: rgba(0,0,0,0.2);
   color: #fefefe;
   border: none;
   font-family: monospace;
   font-weight: bold;
-  font-size: clamp(20px,2vw,24px);
+  font-size: 1.5rem;
   text-align: center;
   justify-content: space-between;
   align-items: center;
