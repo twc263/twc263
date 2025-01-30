@@ -41,7 +41,7 @@ body {
     opacity: 0;
   }
 .content {
-    padding-top: 10rem; /* Equal to or slightly more than the navbar height */
+    padding-top: 5vh; /* Equal to or slightly more than the navbar height */
     margin: 0 auto;
 }
 .nav-container {
