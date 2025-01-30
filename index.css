@@ -4,13 +4,11 @@ margin: 5vh 0;
 width: 100vw;
 height: var(--height);
 overflow: hidden;
-font-family: monospace;
 mask-image: linear-gradient(
   to right,
   transparent,
   red 12% 88%,
   transparent
-  
 );
 }
 .scroll .brands-list{
@@ -93,6 +91,7 @@ padding-top: 8vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 3vw;
 }
 .buttons button{
   width: clamp(28px,4vw,48px);
@@ -107,6 +106,7 @@ padding-top: 8vh;
   text-align: center;
   justify-content: space-between;
   align-items: center;
+  
 }
 .buttons button:hover { 
   background-color: rgba(0,0,0,0.5);
