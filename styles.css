@@ -148,6 +148,8 @@ width:7rem;
 
 .footer-section h4 {
     font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 /* Default link color */
