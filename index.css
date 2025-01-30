@@ -1,13 +1,10 @@
-body{
-  margin:0;
-  font-family: monospace;
-  padding-top: 100px;
-}
+
 .scroll {
 margin: 5vh 0;
 width: 100vw;
 height: var(--height);
 overflow: hidden;
+font-family: monospace;
 mask-image: linear-gradient(
   to right,
   transparent,
